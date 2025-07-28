@@ -34,9 +34,9 @@ class AdminController extends Controller
     }
 
     // ✅ Muestra las reservas si el admin ha iniciado sesión
-    public function showReservations()
+    public function reservations()
     {
-         $reservas = \App\Models\Reserva::orderBy('created_at', 'desc')->get();
+         $reservas = Reserva::all(); //\App\Models\Reserva::orderBy('created_at', 'desc')->get();
 
         return view('admin.reservations', compact('reservas'));
     }

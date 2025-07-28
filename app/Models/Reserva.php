@@ -8,10 +8,9 @@ use Carbon\Carbon;
 class Reserva extends Model
 {
     public $timestamps = false;
-        
+
     protected $table = 'reservas'; // Si el nombre de tabla es diferente al modelo
-    protected $dates = ['fecha_inicio', 'fecha_fin', 'created_at'];
-    
+        
     protected $fillable = [
         'nombre',
         'email',
@@ -19,5 +18,8 @@ class Reserva extends Model
         'fecha_inicio',
         'fecha_fin',
         'habitaciones'
+        
     ];
+
+    protected $dates = ['fecha_inicio', 'fecha_fin'];
 }
